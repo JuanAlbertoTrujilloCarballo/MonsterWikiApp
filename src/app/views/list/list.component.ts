@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Entree } from 'src/app/shared/interfaces/entree';
+import { EntreeService } from 'src/app/shared/services/entree.service';
 
 @Component({
   selector: 'app-list',
@@ -7,28 +7,28 @@ import { Entree } from 'src/app/shared/interfaces/entree';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
-  public entryList: Entree[];
+  
+  public entryList: any;
 
-  constructor() {
-    this.entryList = [
-      {
-        name: 'Introducción a Angular',
-        title: 'En esta lección realizaremos una pequeña',
-        weakness: 'holiwi'
-      },
-      {
-        name: 'Introducción a Angular',
-        title: 'En esta lección realizaremos una pequeña',
-        weakness: 'holiwi2'
-      },
-      {
-        name: 'Introducción a Angular',
-        title: 'En esta lección realizaremos una pequeña',
-        weakness: 'holiwi3'
-      },
-    ];
+  constructor(private entreeService: EntreeService) {}
+
+  ngOnInit(): void {
+    this.retrieveEntry();
   }
-  ngOnInit(): void {}
+
+  private retrieveEntry(): void {
+    this.entreeService.retrieveEntry().subscribe(
+      (data) => {
+        this.entryList = data;
+      },
+      (error: Error) => {
+        console.log('Error: ', error);
+      },
+      () => {
+        console.log('Petición realizada correctamente');
+      }
+    );
+  }
   public showName(name: string): void {
     alert(`Entrada seleccionada: ${name}.`);
   }
