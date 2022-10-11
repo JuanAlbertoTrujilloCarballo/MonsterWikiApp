@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MonsterEntree } from 'src/app/shared/interfaces/monster-entree';
+import { ObjectEntree } from 'src/app/shared/interfaces/object-entree';
 
 @Component({
   selector: 'app-entree',
@@ -7,16 +7,17 @@ import { MonsterEntree } from 'src/app/shared/interfaces/monster-entree';
   styleUrls: ['./entree.component.css'],
 })
 export class EntreeComponent implements OnInit {
-  
+
   @Input()
-  public monsterEntree: MonsterEntree;
+  public objectEntree: ObjectEntree;
   constructor() {
-    this.monsterEntree = {
+    this.objectEntree = {
       name: '',
-      title: '',
       description: '',
       url: '',
     };
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 }

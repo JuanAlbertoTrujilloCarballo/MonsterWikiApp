@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 const routes: Routes = [ { path: 'list', component: ListComponent },
 { path: 'us', component: AboutUsComponent },
 { path: '', redirectTo: '/list', pathMatch:'full'},
+{ path: 'list-items', redirectTo: '/list-items', pathMatch:'full'},
 { path:'**', component:PageNotFoundComponent} 
 ];
 

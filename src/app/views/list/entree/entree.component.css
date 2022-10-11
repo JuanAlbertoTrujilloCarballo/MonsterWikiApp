@@ -3,6 +3,8 @@
   border-radius: 10px;
 }
 
-#entree * {
-  padding: 10px;
+
+#img-container * {
+  width:10%;
+  height:10%
 }

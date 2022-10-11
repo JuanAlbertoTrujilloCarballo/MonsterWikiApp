@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListItemsComponent } from './views/list-items/list-items.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponent,
     EntreeComponent,
     PageNotFoundComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ListItemsComponent
   ],
   imports: [
     BrowserModule,
