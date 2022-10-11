@@ -17,6 +17,7 @@ import { ObjectEntreeComponent } from './views/object-list/object-entree/object-
     AppComponent,
     MenuComponent,
     ListComponent,
+    ObjectListComponent,
     EntreeComponent,
     PageNotFoundComponent,
     AboutUsComponent,
