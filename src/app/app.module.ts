@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ObjectListComponent } from './views/object-list/object-list.component';
+import { ObjectEntreeComponent } from './views/object-list/object-entree/object-entree.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponent,
     EntreeComponent,
     PageNotFoundComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ObjectListComponent,
+    ObjectEntreeComponent
   ],
   imports: [
     BrowserModule,
