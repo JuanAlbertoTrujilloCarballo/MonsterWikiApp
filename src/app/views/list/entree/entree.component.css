@@ -6,3 +6,8 @@
 #entree * {
   padding: 10px;
 }
+
+#img-container {
+  width:60%;
+  height:60%
+}

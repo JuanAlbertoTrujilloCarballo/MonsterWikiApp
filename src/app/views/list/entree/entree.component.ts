@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Entree } from 'src/app/shared/interfaces/entree';
+import { MonsterEntree } from 'src/app/shared/interfaces/monster-entree';
 
 @Component({
   selector: 'app-entree',
@@ -7,14 +7,15 @@ import { Entree } from 'src/app/shared/interfaces/entree';
   styleUrls: ['./entree.component.css'],
 })
 export class EntreeComponent implements OnInit {
-  
+
   @Input()
-  public entree: Entree;
+  public monsterEntree: MonsterEntree;
   constructor() {
-    this.entree = {
+    this.monsterEntree = {
       name: '',
       title: '',
-      weakness: '',
+      description: '',
+      url: '',
     };
   }
   ngOnInit(): void {}
