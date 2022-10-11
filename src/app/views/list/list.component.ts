@@ -9,10 +9,10 @@ import { EntreeService } from 'src/app/shared/services/entree.service';
 })
 export class ListComponent implements OnInit {
   
-  public entryList: MonsterEntree[];
+  public entryMonsterList: MonsterEntree[];
 
   constructor() {
-    this.entryList = [
+    this.entryMonsterList = [
       {
         name: 'Rathalos',
         title: 'Rey de los cielos',

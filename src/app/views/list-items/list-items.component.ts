@@ -7,10 +7,10 @@ import { ObjectEntree } from 'src/app/shared/interfaces/object-entree';
   styleUrls: ['./list-items.component.css'],
 })
 export class ListItemsComponent implements OnInit {
-  public entryList: ObjectEntree[];
+  public entryObjectList: ObjectEntree[];
 
   constructor() {
-    this.entryList = [
+    this.entryObjectList = [
       {
         name: 'Pocion',
         description: 'Recupera una pequeña cantidad de salud',
@@ -20,7 +20,6 @@ export class ListItemsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   public showName(name: string): void {

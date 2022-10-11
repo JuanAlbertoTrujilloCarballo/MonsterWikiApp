@@ -1,6 +1,6 @@
 <div id="list">
   <h3> Listado de entradas a esta web: </h3>
-  <app-entree *ngFor="let entree of entryList" [entree]="objectEntree"
+  <app-entree *ngFor="let entree of entryObjectList" [entree]="entree"
     (click)="showName(entree.name)">
   </app-entree>
 </div>
