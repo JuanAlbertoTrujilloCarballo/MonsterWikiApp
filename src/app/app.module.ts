@@ -11,6 +11,7 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ObjectListComponent } from './views/object-list/object-list.component';
 import { ObjectEntreeComponent } from './views/object-list/object-entree/object-entree.component';
+import { IndividualMonsterListComponent } from './views/list/individual-monster-list/individual-monster-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ObjectEntreeComponent } from './views/object-list/object-entree/object-
     PageNotFoundComponent,
     AboutUsComponent,
     ObjectListComponent,
-    ObjectEntreeComponent
+    ObjectEntreeComponent,
+    IndividualMonsterListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MonsterEntree } from 'src/app/shared/interfaces/monster-entree';
-import { EntreeService } from 'src/app/shared/services/entree.service';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
+  selector: 'app-individual-monster-list',
+  templateUrl: './individual-monster-list.component.html',
+  styleUrls: ['./individual-monster-list.component.css']
 })
-export class ListComponent implements OnInit {
-  public entryMonsterList: MonsterEntree[];
+export class IndividualMonsterListComponent implements OnInit {
+
+  public entryIndividualMonsterList: MonsterEntree[];
 
   constructor() {
-    this.entryMonsterList = [
+    this.entryIndividualMonsterList = [
       {
         name: 'Rathalos',
         title: 'Rey de los cielos',
@@ -36,14 +36,7 @@ export class ListComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
-
-  public showName(name: string): void {
-    alert(`Entrada seleccionada: ${name}.`);
+  ngOnInit(): void {
   }
 
-  public showMonster(name: string): void {
-    console.log({name})
-    // alert(`Entrada seleccionada: ${name}.`);
-  }
 }
