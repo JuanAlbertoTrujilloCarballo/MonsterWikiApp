@@ -1,6 +1,4 @@
 <div id="list">
-  <h3> Listado de entradas a esta web: </h3>
-  <app-entree *ngFor="let monsterEntree of entryMonsterList" [monsterEntree]="monsterEntree"
-    (click)="showMonster(monsterEntree.name)" routerLink="/monster-information/{{monsterEntree.name}}" >
+  <app-entree *ngFor="let monsterEntree of entryMonsterList" [monsterEntree]="monsterEntree" >
   </app-entree>
 </div>

@@ -1,5 +1,4 @@
 <div id="list">
-  <h3> Listado de entradas a esta web: </h3>
-  <app-entree >
+  <app-entree *ngFor="let monsterEntree of MonsterInformation" [monsterEntree]="monsterEntree">
   </app-entree>
 </div>

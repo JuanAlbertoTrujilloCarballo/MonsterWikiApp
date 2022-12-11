@@ -1,5 +1,4 @@
 <div id="list">
-  <h3>Listado de entradas a la web:</h3>
   <app-object-entree *ngFor="let objectEntree of entryObjectList" [objectEntree]="objectEntree" (click)="showName(objectEntree.name)">
   </app-object-entree>
 </div>

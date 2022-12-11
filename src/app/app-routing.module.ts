@@ -12,7 +12,7 @@ const routes: Routes = [ { path: 'list', component: ListComponent },
 { path: 'us', component: AboutUsComponent },
 { path: '', redirectTo: '/list', pathMatch:'full'},
 { path: 'object-list', component:ObjectListComponent},
-{ path: 'monster-information', component:IndividualMonsterListComponent},
+{ path: 'monster-information/:name', component:IndividualMonsterListComponent},
 { path:'**', component:PageNotFoundComponent} 
 ];
 

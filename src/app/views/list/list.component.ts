@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
 import { MonsterEntree } from 'src/app/shared/interfaces/monster-entree';
 import { EntreeService } from 'src/app/shared/services/entree.service';
 
@@ -9,6 +11,13 @@ import { EntreeService } from 'src/app/shared/services/entree.service';
 })
 export class ListComponent implements OnInit {
   public entryMonsterList: MonsterEntree[];
+
+  Monster: any = {
+    nameIndividual: '',
+    titleIndividual: '',
+    descriptionIndividual: '',
+    url: ''
+    };
 
   constructor() {
     this.entryMonsterList = [
@@ -34,6 +43,8 @@ export class ListComponent implements OnInit {
         url: 'https://i.pinimg.com/originals/b6/f2/a0/b6f2a0aa3fe95d5c96a7cd6f383f26ae.png',
       },
     ];
+
+    
   }
 
   ngOnInit(): void {}
@@ -42,8 +53,32 @@ export class ListComponent implements OnInit {
     alert(`Entrada seleccionada: ${name}.`);
   }
 
-  public showMonster(name: string): void {
+  public showMonsterName(name: string): void {
     console.log({name})
+    // alert(`Entrada seleccionada: ${name}.`);
+  }
+
+  
+  public showMonsterTitle(title: string): void {
+    console.log({title})
+    
+    // alert(`Entrada seleccionada: ${name}.`);
+  }
+
+  
+  public showMonsterDescription(description: string): void {
+    console.log({description})
+    
+    // alert(`Entrada seleccionada: ${name}.`);
+  }
+
+  public getMonster(name:string, title: string, description: string): void {
+    this.Monster.nameIndividual=name, this.Monster.titleIndividual=title, this.Monster.descriptionIndividual=description;
+    this.Monster.titleIndividual=title;
+    this.Monster.descriptionIndividual=description;
+    console.log('2',{this:this.Monster.nameIndividual})
+    console.log('2',{this:this.Monster.titleIndividual})
+    console.log('2',{this:this.Monster.descriptionIndividual})
     // alert(`Entrada seleccionada: ${name}.`);
   }
 }
